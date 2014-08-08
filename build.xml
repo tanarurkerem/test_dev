@@ -2,6 +2,6 @@
 <project name="teszt" default="build">
   <target name="build">
     <exec command="rm -rf www" passthru="true" checkreturn="true" />
-    <exec command="drush make test_dev/build.make www" passthru="true" checkreturn="true" />
+    <exec command="drush make build.make www" passthru="true" checkreturn="true" />
   </target>
 </project>
