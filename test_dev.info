@@ -5,3 +5,5 @@ core = 7.x
 dependencies[] = block
 dependencies[] = dblog
 dependencies[] = admin_menu
+
+files[] = test_dev.test
