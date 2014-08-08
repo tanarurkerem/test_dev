@@ -11,4 +11,8 @@
     <exec command="drush en simpletest -y" passthru="true" checkreturn="true" dir="${webroot}"/>
     <exec command="drush test-run TestDevTestCase --uri=${uri} --xml=${test-report-dir}" passthru="true" checkreturn="true" dir="${webroot}"/>
   </target>
+  <available file="${test-report-dir}" property="test-report-dir-exists" />
+  <target name="test-report-dir" unless="test-report-dir-exists">
+    <mkdir dir="${test-report-dir}" />
+  </target>
 </project>
