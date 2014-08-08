@@ -5,6 +5,6 @@
     <exec command="chmod -R 777 ${webroot}" passthru="true" checkreturn="true"/>
     <exec command="rm -rf ${webroot}" passthru="true" checkreturn="true"/>
     <exec command="drush make build.make ${webroot}" passthru="true" checkreturn="true" />
-    <exec command="drush si minimal --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=admin -y" passthru="true" checkreturn="true" dir="${webroot}"/>
+    <exec command="drush si test_dev --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=admin -y" passthru="true" checkreturn="true" dir="${webroot}"/>
   </target>
 </project>
