@@ -11,11 +11,12 @@ class TestDevTestCase extends DrupalWebTestCase {
     );
   }
   public function setUp() {
-    parent::setUp(array(''));
+    $this->profile = 'test_dev';
+    parent::setUp();
   }
   public function testInstall() {
-    $this->drupalGet('/');
-    $this->assertText('Welcome to Site-Install');
+    $this->drupalGet('<front>');
+    $this->assertText('Welcome to');
   }
 }
 
