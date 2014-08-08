@@ -1,3 +1,6 @@
 name = testdev
 description = Test Profile for Development Environment
 core = 7.x
+
+dependencies[] = block
+dependencies[] = dblog
