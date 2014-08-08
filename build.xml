@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <project name="teszt" default="build">
+  <property name="webroot" value="../www" />
   <target name="build">
-    <exec command="rm -rf www" passthru="true" checkreturn="true" />
-    <exec command="drush make build.make www" passthru="true" checkreturn="true" />
+    <exec command="rm -rf ${webroot}" passthru="true" checkreturn="true"/>
+    <exec command="drush make build.make ${webroot}" passthru="true" checkreturn="true" />
   </target>
 </project>
